@@ -155,7 +155,7 @@ Responsive media queries
 }
 
 .title {
-  font-size: 24px;
+  font-size: 40px;
   margin-bottom: 50px;
 }
 
@@ -398,6 +398,14 @@ footer {
   left: 0; 
   width: 100%; 
   height: 100%; 
+}
+
+.album img {
+  width: 100%;
+}
+
+.album h3 {
+  font-size: 22px;
 }
 
 /***********************************
