@@ -51,7 +51,6 @@ Responsive media queries
   background: url('../img/air-studios-controlroom.jpg') no-repeat fixed;
   background-position-x: center;
   background-size: cover;
-  min-height: 630px;
   position: relative;
 }
 
@@ -103,6 +102,7 @@ Responsive media queries
 .bg-color {
   background-color: RGBA(0, 0, 0, 0.67);
   min-height: 650px;
+  height: 100vh;
 }
 
 .navbar-border {}
@@ -435,9 +435,6 @@ Responsive media queries
   .about-text {  
     font-size: 1.3em;
   }
-  .bg-color {
-    min-height: 1200px;
-  }
   .banner-text {
     margin-top: 270px;
   }
@@ -453,9 +450,6 @@ Responsive media queries
   } 
   .about-text {  
     font-size: 1.2em;
-  }
-  .bg-color {
-    min-height: 1000px;
   }
   .banner-text {
     margin-top: 210px;
