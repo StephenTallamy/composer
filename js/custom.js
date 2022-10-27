@@ -19,7 +19,7 @@
     var nav = $($anchor.attr('href'));
     if (nav.length) {
       $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top
+        scrollTop: parseInt($($anchor.attr('href')).offset().top - $(".navbar-default").height(), 10)
       }, 1500, 'easeInOutExpo');
 
       event.preventDefault();
@@ -31,7 +31,7 @@
     event.preventDefault();
     var hash = this.hash;
     $('html, body').animate({
-      scrollTop: $(hash).offset().top
+      scrollTop: parseInt($(hash).offset().top - $(".navbar-default").height(), 10)
     }, 900, function() {
       window.location.hash = hash;
     });
