@@ -940,6 +940,7 @@ section {
 
 .album img {
   width: 100%;
+  border: 1px solid #3b434a;
 }
 
 h3 {
