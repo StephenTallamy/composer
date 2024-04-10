@@ -1001,9 +1001,15 @@ h3 {
   }
 }
 
+@media (max-width: 1000px) {
+  #about {
+    background-position-x: -100px;
+  }
+}
+
 @media (max-width: 551px) {
   #about {
-    background-position-x: -130px;
+    background-position-x: -350px;
   }
 }
 
