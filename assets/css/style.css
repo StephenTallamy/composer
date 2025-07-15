@@ -194,6 +194,16 @@ h6 {
   visibility: visible;
 }
 
+.btn-primary {
+  background-color: #111111;
+  border-color: #111111;
+  font-size: 1.1em;
+}
+
+.btn-primary:hover {
+  background-color: #ffb727;
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
@@ -943,6 +953,32 @@ section {
   border: 1px solid #3b434a;
 }
 
+#films .row {
+  margin: 40px 0 20px;
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.film {
+  font-size: 1.1em;
+}
+
+.film h3 {
+  font-size: 1.8em;
+  margin: 20px 0 10px;
+}
+
+.synopsis {
+  font-size: 1.2em;
+}
+
+.credits {
+  margin: 40px 0;
+  list-style-type: none;
+}
+
 h3 {
   font-size: 22px;
 }
@@ -1003,10 +1039,16 @@ h3 {
   #about {
     background-position-x: -350px;
   }
+  .synopsis {
+    font-size: 1em;
+  }
 }
 
 @media (min-width: 551px) and (max-width: 980px) {
   .title-text {
     margin-bottom: 15px;
+  }
+  .synopsis {
+    font-size: 1em;
   }
 }
