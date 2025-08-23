@@ -14,13 +14,13 @@ body {
 }
 
 a {
-  color: #ffb727;
+  color: #444444;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ffc85a;
-  text-decoration: none;
+  color: #444444;
+  text-decoration: underline;
 }
 
 h1,
@@ -202,6 +202,7 @@ h6 {
 
 .btn-primary:hover {
   background-color: #ffb727;
+  text-decoration: none;
 }
 
 @media (max-width: 1366px) {
@@ -922,6 +923,9 @@ section {
 .about-text p {
   color: white;
 }
+.about-text a {
+  color: white;
+}
 .title-text {
   color: white;
   padding: 0px 25px 0px 0px;
@@ -948,6 +952,7 @@ section {
   height: 100%; 
 }
 
+.placement img,
 .album img {
   width: 100%;
   border: 1px solid #3b434a;
@@ -968,6 +973,12 @@ section {
 .film h3 {
   font-size: 1.8em;
   margin: 20px 0 10px;
+}
+
+.placement h3 {
+  min-height: 55px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .synopsis {
