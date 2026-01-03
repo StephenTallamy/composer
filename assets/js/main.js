@@ -250,4 +250,72 @@
    */
   new PureCounter();
 
+  /**
+   * Show More Functionality for Placements and Albums
+   */
+  const initShowMore = () => {
+    // Hide items beyond the 8th in both placements and albums sections
+    const placementItems = document.querySelectorAll('#placements .col-md-3.placement');
+    const albumItems = document.querySelectorAll('#sync .col-md-3.album');
+    
+    // Hide placement items beyond 8th
+    placementItems.forEach((item, index) => {
+      if (index >= 8) {
+        item.classList.add('hidden-item');
+      }
+    });
+    
+    // Hide album items beyond 8th
+    albumItems.forEach((item, index) => {
+      if (index >= 8) {
+        item.classList.add('hidden-item');
+      }
+    });
+    
+    // Show more button functionality for placements
+    const placementsShowMoreBtn = document.getElementById('placements-show-more');
+    if (placementsShowMoreBtn) {
+      placementsShowMoreBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const hiddenItems = document.querySelectorAll('#placements .col-md-3.placement.hidden-item');
+        hiddenItems.forEach((item) => {
+          item.classList.remove('hidden-item');
+          item.classList.add('revealing');
+        });
+        this.style.display = 'none';
+      });
+      
+      // Hide button if there are 8 or fewer items
+      if (placementItems.length <= 8) {
+        placementsShowMoreBtn.style.display = 'none';
+      }
+    }
+    
+    // Show more button functionality for albums
+    const albumsShowMoreBtn = document.getElementById('albums-show-more');
+    if (albumsShowMoreBtn) {
+      albumsShowMoreBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const hiddenItems = document.querySelectorAll('#sync .col-md-3.album.hidden-item');
+        hiddenItems.forEach((item) => {
+          item.classList.remove('hidden-item');
+          item.classList.add('revealing');
+        });
+        this.style.display = 'none';
+      });
+      
+      // Hide button if there are 8 or fewer items
+      if (albumItems.length <= 8) {
+        albumsShowMoreBtn.style.display = 'none';
+      }
+    }
+  };
+  
+  // Initialize show more functionality when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initShowMore);
+  } else {
+    initShowMore();
+  }
+
 })()

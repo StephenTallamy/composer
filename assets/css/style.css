@@ -1063,3 +1063,57 @@ h3 {
     font-size: 1em;
   }
 }
+
+/* Show More Functionality */
+.placement.hidden-item,
+.album.hidden-item {
+  display: none;
+}
+
+.placement.revealing,
+.album.revealing {
+  animation: wipeDown 0.5s ease-out forwards;
+  display: block;
+}
+
+@keyframes wipeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.show-more-link {
+  display: inline-block;
+  color: #ffb727;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.show-more-link:hover {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+.show-more-link i {
+  font-size: 24px;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.show-more-link.hidden {
+  display: none;
+}
+
+.show-more-container {
+  text-align: center;
+  margin-top: 10px;
+}
